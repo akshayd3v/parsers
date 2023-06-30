@@ -1,0 +1,15 @@
+name: test-action-go
+on: push
+jobs:
+  myJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cryptosoft-SBOM-generator.
+        id: Cryptosoft-SBOM-generator
+        uses: CryptosoftInc/Dependency-Track@1.0.0
+        with:
+          dt-url:  "https://dt-api.staging.cryptosoft.com/api/v1/bom"
+          api-key: '1DMIXAnGtTIeTQDddlHSvpj6d3as174S'
+          project-name: "test-golang-30june"
+          project-version: "1.2"
+     
